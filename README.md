@@ -2,46 +2,26 @@
 
 Este repositorio es un repositorio de desafios a resolver. Cada rama contiene un caso diferente al que te deberas enfrentar.
 
-# 🧩 Problema 1: Editar un commit antiguo
-Escenario: Te das cuenta de que cometiste un error en un archivo hace tres commits(subiste una api key), y necesitas modificar ese commit específico.
+# 🧩 Problema 6: Resolver un conflicto complejo en una fusión (problema-6-conflicto-fusion-avanzado)
+## 🎯 Desafío:
+Dos ramas (develop y feature-reportes) han evolucionado de forma paralela. Ambas modifican el mismo archivo (reportes.py) en las mismas líneas, con diferentes enfoques. Necesitas fusionar estas ramas manualmente resolviendo los conflictos de forma inteligente.
 
-Solución esperada:
+## 📝 Escenario:
+La rama develop tiene una versión refactorizada del archivo con nuevos métodos.
+La rama feature-reportes implementa una lógica específica que también edita las mismas líneas.
+Al hacer merge, se generan conflictos en el archivo.
 
-Usar rebase interactivo para editar el commit.
+# 📝 Instrucciones para ti:
+Cambia a la rama develop.
+Intenta fusionar la rama feature-reportes.
+Git mostrará un conflicto en el archivo reportes.py.
+Resuelve el conflicto eligiendo lo mejor de ambas ramas:
+Mantén la estructura refactorizada de main.
+Integra la lógica de feature-reportes de forma ordenada.
+Completa la fusión.
 
-Modificar los archivos.
-
-Amendar el commit y continuar el rebase.
-
-
-# 🧩 Problema 2: Mover commits a otra rama
-Escenario: Hiciste varios commits en la rama main, pero deberían haber estado en una nueva rama llamada feature-x.
-
-Solución esperada:
-
-Crear una nueva rama desde un punto anterior.
-
-Mover los commits con cherry-pick.
-
-# 🧩 Problema 3: Eliminar commits anteriores al último
-Escenario: Hiciste 3 commits, pero solo el último es válido. Quieres borrar los dos anteriores.
-
-Solución esperada:
-
-Usar rebase para eliminar commits específicos.
-
-O resetear la rama antes de esos commits y hacer un nuevo commit si es necesario.
-
-# 🧩 Problema 4: Deshacer el último commit (sin perder los cambios)
-Escenario: El último commit fue un error, pero quieres mantener los archivos modificados.
-
-Solución esperada:
-
-Usar reset
-
-# 🧩 Problema 5: Recuperar un commit perdido
-Escenario: Hiciste reset --hard y perdiste cambios que estaban en un commit. Quieres recuperarlo.
-
-Solución esperada:
-
-Usar git reflog para encontrar el commit perdido y recuperarlo con checkout o reset.
+## ✅ ¿Cómo sabes que lo lograste?
+No quedan conflictos.
+El archivo reportes.py tiene tanto el refactor de main como la funcionalidad de feature-reportes.
+El historial muestra un commit de fusión.
+El proyecto sigue funcionando.
