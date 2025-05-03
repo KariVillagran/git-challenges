@@ -1,2 +1,3 @@
 def generar_reporte():
-  print('Generando reporte')
+  mensaje = 'Generando reporte general'
+  print(mensaje)
